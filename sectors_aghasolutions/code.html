@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <title>Sectors - AghaSolutions</title>
+    <script src='https://cdn.tailwindcss.com?plugins=forms,container-queries'></script>
+    <link href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap' rel='stylesheet'/>
+    <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Work+Sans:wght@400;500;600;700;900&amp;display=swap' rel='stylesheet'/>
+    <script id='tailwind-config'>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    'colors': {
+                        'on-tertiary-fixed': '#181c1c',
+                        'secondary-fixed': '#e5e2e1',
+                        'tertiary-fixed': '#e0e3e2',
+                        'on-primary-fixed-variant': '#005228',
+                        'on-error-container': '#93000a',
+                        'tertiary-fixed-dim': '#c4c7c6',
+                        'tertiary-container': '#959998',
+                        'secondary-container': '#e2dfde',
+                        'surface-bright': '#fbf9f8',
+                        'surface-container-lowest': '#ffffff',
+                        'on-secondary-fixed-variant': '#474746',
+                        'on-tertiary-container': '#2d3131',
+                        'surface-variant': '#e4e2e2',
+                        'primary-container': '#27ae60',
+                        'on-tertiary': '#ffffff',
+                        'on-surface-variant': '#3d4a3f',
+                        'tertiary': '#5b5f5f',
+                        'inverse-primary': '#61de8a',
+                        'error-container': '#ffdad6',
+                        'error': '#ba1a1a',
+                        'on-secondary-fixed': '#1c1b1b',
+                        'surface-container-highest': '#e4e2e2',
+                        'on-tertiary-fixed-variant': '#434847',
+                        'surface': '#fbf9f8',
+                        'on-surface': '#1b1c1c',
+                        'on-primary-container': '#00391a',
+                        'outline-variant': '#bccabc',
+                        'on-secondary': '#ffffff',
+                        'inverse-on-surface': '#f2f0f0',
+                        'primary': '#006d37',
+                        'surface-tint': '#006d37',
+                        'on-primary': '#ffffff',
+                        'surface-container-high': '#e9e8e7',
+                        'surface-container-low': '#f5f3f3',
+                        'on-primary-fixed': '#00210c',
+                        'secondary-fixed-dim': '#c8c6c5',
+                        'surface-dim': '#dbdad9',
+                        'on-error': '#ffffff',
+                        'secondary': '#5f5e5e',
+                        'inverse-surface': '#303031',
+                        'on-background': '#1b1c1c',
+                        'primary-fixed-dim': '#61de8a',
+                        'on-secondary-container': '#636262',
+                        'outline': '#6d7a6e',
+                        'surface-container': '#efeded',
+                        'primary-fixed': '#7efba4',
+                        'background': '#fbf9f8'
+                    },
+                    'borderRadius': {
+                        'DEFAULT': '0.125rem',
+                        'lg': '0.25rem',
+                        'xl': '0.5rem',
+                        'full': '0.75rem'
+                    },
+                    'spacing': {
+                        'margin-mobile': '1rem',
+                        'stack-lg': '2rem',
+                        'stack-sm': '0.5rem',
+                        'section-padding': '5rem',
+                        'container-max': '1280px',
+                        'gutter': '1.5rem',
+                        'stack-md': '1rem'
+                    },
+                    'fontFamily': {
+                        'headline-lg': ['Work Sans'],
+                        'headline-lg-mobile': ['Work Sans'],
+                        'body-lg': ['Open Sans'],
+                        'headline-md': ['Work Sans'],
+                        'display-lg': ['Work Sans'],
+                        'body-md': ['Open Sans'],
+                        'label-sm': ['Work Sans']
+                    },
+                    'fontSize': {
+                        'headline-lg': ['32px', { 'lineHeight': '1.3', 'letterSpacing': '0.01em', 'fontWeight': '600' }],
+                        'headline-lg-mobile': ['28px', { 'lineHeight': '1.2', 'fontWeight': '600' }],
+                        'body-lg': ['18px', { 'lineHeight': '1.6', 'fontWeight': '400' }],
+                        'headline-md': ['24px', { 'lineHeight': '1.4', 'fontWeight': '600' }],
+                        'display-lg': ['48px', { 'lineHeight': '1.2', 'letterSpacing': '0.02em', 'fontWeight': '700' }],
+                        'body-md': ['16px', { 'lineHeight': '1.6', 'fontWeight': '400' }],
+                        'label-sm': ['14px', { 'lineHeight': '1.2', 'letterSpacing': '0.05em', 'fontWeight': '500' }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .blob-mask-1 { border-radius: 68% 32% 51% 49% / 46% 41% 59% 54%; }
+        .blob-mask-2 { border-radius: 36% 64% 42% 58% / 54% 53% 47% 46%; }
+        .blob-mask-3 { border-radius: 56% 44% 58% 42% / 48% 61% 39% 52%; }
+        .blob-mask-4 { border-radius: 44% 56% 38% 62% / 65% 39% 61% 35%; }
+        .blob-mask-5 { border-radius: 62% 38% 54% 46% / 41% 58% 42% 59%; }
+        .blob-mask-6 { border-radius: 38% 62% 46% 54% / 59% 42% 58% 41%; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased flex flex-col min-h-screen">
+<!-- Top Utility Bar (Based on Image Reference, matching dark industrial theme) -->
+<div class="bg-on-secondary-fixed text-secondary-fixed w-full py-2">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex justify-between items-center font-label-sm text-label-sm">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 16px;">call</span>
+<span>+994 (50) 261 35 58</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 16px;">mail</span>
+<span>sales@aghasolutions.ae</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TopNavBar Component (from JSON) -->
+<header class="bg-surface dark:bg-surface-container border-b border-outline-variant dark:border-outline full-width top-0 z-50 sticky">
+<nav class="flex flex-col w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex items-center justify-between py-4">
+<!-- Brand Logo -->
+<div class="flex-shrink-0">
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface uppercase tracking-tight" href="../home_aghasolutions/code.html">AghaSolutions</a>
+</div>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../home_aghasolutions/code.html">Home</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../about_us_aghasolutions/code.html">About us</a>
+<a class="font-label-sm text-label-sm text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary dark:border-inverse-primary pb-1" href="../sectors_aghasolutions/code.html">Sectors</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../products_aghasolutions/code.html">Products</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../partners_aghasolutions/code.html">Partners</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../clients_aghasolutions/code.html">Clients</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../contact_aghasolutions/code.html">Contact</a>
+</div>
+<!-- Mobile Menu Button -->
+<div class="md:hidden flex items-center ml-4">
+<button id="mobile-menu-button" class="text-on-surface-variant hover:text-primary transition-colors focus:outline-none">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+<!-- Trailing Icon Actions -->
+<div class="flex items-center space-x-4">
+<button aria-label="language" class="text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined transform transition-transform hover:scale-110">language</span>
+</button>
+<button aria-label="search" class="text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined transform transition-transform hover:scale-110">search</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Mobile Menu Container -->
+<div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-outline-variant shadow-lg overflow-hidden transition-all duration-300">
+<nav class="flex flex-col py-4 px-margin-mobile">
+<a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../home_aghasolutions/code.html">Home</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../about_us_aghasolutions/code.html">About</a><a class="text-primary font-semibold py-2 border-b border-outline-variant/30" href="../sectors_aghasolutions/code.html">Sectors</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../products_aghasolutions/code.html">Products</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../partners_aghasolutions/code.html">Partners</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../clients_aghasolutions/code.html">Clients</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../contact_aghasolutions/code.html">Contact</a>
+</nav>
+</div>
+
+</header>
+<!-- Main Content -->
+
+        <section class='relative w-full h-[300px] md:h-[400px] flex items-center justify-center overflow-hidden'>
+            <img alt='Industrial interior banner' class='absolute inset-0 w-full h-full object-cover' src='https://lh3.googleusercontent.com/aida-public/AB6AXuAY6vLVx3BJNe43XMOBhBx3v7bWzaExCQDvDK8p_3NGnEivV-4f41xFYE3-y3h2RaV4YFkX4mRN_fLMnGUz-13q9Y4LikbokkuTSNsBYaYJi6xeUAnMEKcZ8TZW1EGpeP848YbS5NN8_aAyl1WSFuW2OuNCH38sgBjzseHzjSocycthuiitHLoYEWUjIGT2QFpaSNdItRpRd3ntomTqT4Fxam31-HUSInEPFJubL3LKHZwzWiDhEX7WhKlj-gHUDvsNJ-nrVx0isx9L'/>
+            <div class='absolute inset-0 bg-on-background/50'></div>
+            <div class='relative z-10 text-center text-on-primary'>
+                <h1 class='font-display-lg text-display-lg mb-2 text-white drop-shadow-md'>Sectors</h1>
+                <p class='font-label-sm text-label-sm text-white/90 uppercase tracking-widest'><a class='hover:underline' href='../home_aghasolutions/code.html'>AghaSolutions</a> <span class='mx-2'>&gt;</span> Sectors</p>
+            </div>
+        </section>
+        <div class='bg-surface border-b border-surface-variant sticky top-[73px] z-40 hidden md:block'>
+            <div class='max-w-container-max mx-auto px-gutter py-4 flex justify-center gap-8 font-label-sm text-label-sm font-semibold text-on-surface-variant'>
+                <a class='hover:text-primary transition-colors' href='#oil-gas'>Oil &amp; Gas</a>
+                <a class='hover:text-primary transition-colors' href='#energy'>Energy</a>
+                <a class='hover:text-primary transition-colors' href='#construction'>Construction</a>
+                <a class='hover:text-primary transition-colors' href='#marine'>Marine</a>
+                <a class='hover:text-primary transition-colors' href='#petrochemicals'>Petrochemicals</a>
+                <a class='hover:text-primary transition-colors' href='#mining'>Mining</a>
+            </div>
+        </div>
+        <div class='max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-padding flex flex-col gap-section-padding'>
+            <section class='flex flex-col md:flex-row items-center gap-stack-lg md:gap-12' id='oil-gas'>
+                <div class='w-full md:w-1/2 md:pr-12'>
+                    <h2 class='font-headline-lg text-headline-lg text-on-surface mb-stack-sm'>Oil &amp; Gas</h2>
+                    <p class='font-body-md text-body-md text-on-surface-variant'>
+                        AghaSolutions is a provider of a complete range of essential equipment, spare components and consumables for all Oil and Gas sectors.
+                    </p>
+                </div>
+                <div class='w-full md:w-1/2'>
+                    <div class='relative w-full aspect-[4/3] max-w-[500px] mx-auto'>
+                        <img alt='Oil and gas sector' class='w-full h-full object-cover blob-mask-1 shadow-md' src='https://lh3.googleusercontent.com/aida-public/AB6AXuBZMBNRpxYEKj5ut3T4UblE06nhLp5KlRvdaU61xt51-stU1IudcXIaWm5s6ejtmFgpbZxWhiqWQj5z7L9IPsPOriwd-kHkMAlhb37NpvMniJc4N_-HwDq3XjbvOU2htTpwHJQCxKeF0I18rAif6wJKiPJ9RuMzEAEqCVTpY3b88CLxTYlCOhHnU1OMzsdYENElSPbMBkAUuh0y7gOmiHajsk_rIoYkMde87eM-3k212yRtQqD-z9VAEhwkrSZpC9ny7_fCqo8ey8rf'/>
+                    </div>
+                </div>
+            </section>
+            <section class='flex flex-col md:flex-row-reverse items-center gap-stack-lg md:gap-12' id='energy'>
+                <div class='w-full md:w-1/2 md:pl-12'>
+                    <h2 class='font-headline-lg text-headline-lg text-on-surface mb-stack-sm'>Energy</h2>
+                    <p class='font-body-md text-body-md text-on-surface-variant'>
+                        AghaSolutions is providing industry-leading products for all aspects of the energy sector.
+                    </p>
+                </div>
+                <div class='w-full md:w-1/2'>
+                    <div class='relative w-full aspect-[4/3] max-w-[500px] mx-auto'>
+                        <img alt='Energy sector' class='w-full h-full object-cover blob-mask-2 shadow-md' src='https://lh3.googleusercontent.com/aida-public/AB6AXuBO7yP6Q_HyR122Cz2T96sd1NdTVOdc-xKI7Ug-Ihn-6ONmsx1p6tQ0hYWSB-sytPDQGlA516yX5hziopeucn38F-V_iVRC14jsWjTRfvlZ2vxWLzW0ABxdufwlf7TU35mvU2SIL0FvuUvWOpSz3QPZJebrtT1l_U0GR8hRKKZaHrp6dHKZl83BGPw5Lk8yiR07qIjelvcGVw4EZrNrlTcLLvd-7m9_C10N5alushhwrszvPuwMa7vE5YbmOrrjBP6WpO4gGtOuOnN3'/>
+                    </div>
+                </div>
+            </section>
+            <section class='flex flex-col md:flex-row items-center gap-stack-lg md:gap-12' id='construction'>
+                <div class='w-full md:w-1/2 md:pr-12'>
+                    <h2 class='font-headline-lg text-headline-lg text-on-surface mb-stack-sm'>Construction</h2>
+                    <p class='font-body-md text-body-md text-on-surface-variant'>
+                        AghaSolutions delivers multiple brands. From ground-breaking equipment down to the last nail, we have everything you need.
+                    </p>
+                </div>
+                <div class='w-full md:w-1/2'>
+                    <div class='relative w-full aspect-[4/3] max-w-[500px] mx-auto'>
+                        <img alt='Construction sector' class='w-full h-full object-cover blob-mask-3 shadow-md' src='https://lh3.googleusercontent.com/aida-public/AB6AXuBC7dNrnrJeqPqIKJ7GAYU2lC9lYOwTKpmichJPnLWtFZGTZYL8L_bxWbUKgcMATn7uU1kl3e_OLQN-oquGM1QfE8IkZMFFNm5DxL8ZPjh68POjSQQeBLnKrZDE9IV3hN1lfYbcnXnERmZOtonA9Qwexl8UuPR8G0pgpJh1UGsZmchldoQCf1xj4IjiLs5PVYfIaRWH5U7YQ5WpQUNeo0FCd-iI96AUrruaKU9D_Wjuf65ZJuN0amsCY2nXJr9vW707eKSkC5zrkET4'/>
+                    </div>
+                </div>
+            </section>
+            <section class='flex flex-col md:flex-row-reverse items-center gap-stack-lg md:gap-12' id='marine'>
+                <div class='w-full md:w-1/2 md:pl-12'>
+                    <h2 class='font-headline-lg text-headline-lg text-on-surface mb-stack-sm'>Marine</h2>
+                    <p class='font-body-md text-body-md text-on-surface-variant'>
+                        Based on the experience of several years, our company provides the best products and solutions for the marine industry. We offer a wide range of products from the best companies.
+                    </p>
+                </div>
+                <div class='w-full md:w-1/2'>
+                    <div class='relative w-full aspect-[4/3] max-w-[500px] mx-auto'>
+                        <img alt='Marine sector' class='w-full h-full object-cover blob-mask-4 shadow-md' src='https://lh3.googleusercontent.com/aida-public/AB6AXuCbb54eklTP9eIJS9C8PkM4C_2FkL09DRXjwR3Iznm6Tp7YYN4hA9e27PvATqIYY3RslWHSBC1Akfx9eCgSpOrjqKHxZMuoipoQH2u-wiwdQUQEDEkSnsr6v0-fmT7FjYkUFKhX83l5vvLnpJxUMEoqRrz18vgmCXd-3OJYI09g4gTf8zQUXwlKMPWmh11vcON_7HKBhENvNDOdXynRTO-tiGkyK9HfJ-2ajJVg0H0OryKuwpts70ZSnu623S2bru8QCNVr5lbF1JeA'/>
+                    </div>
+                </div>
+            </section>
+            <section class='flex flex-col md:flex-row items-center gap-stack-lg md:gap-12' id='petrochemicals'>
+                <div class='w-full md:w-1/2 md:pr-12'>
+                    <h2 class='font-headline-lg text-headline-lg text-on-surface mb-stack-sm'>Petrochemicals</h2>
+                    <p class='font-body-md text-body-md text-on-surface-variant'>
+                        Our specialist team supports our customers with supplying the best products in all aspects of the petrochemicals industry.
+                    </p>
+                </div>
+                <div class='w-full md:w-1/2'>
+                    <div class='relative w-full aspect-[4/3] max-w-[500px] mx-auto'>
+                        <img alt='Petrochemicals sector' class='w-full h-full object-cover blob-mask-5 shadow-md' src='https://lh3.googleusercontent.com/aida-public/AB6AXuD6dX17JoZN0djbEvAi3oTXXB-u1a_FRW2MpiHbmSbhqhWO1wMYw-ziFPzLf_c1JXxnoUeVu2IhdneigNc6341M6_4XtyRefjoyabyG_ZaY8TC8xstHlpqIdYA0DdfgTxATyAVczAzw41smuBIe7PNwBC6WvHX5uCqF6X09vCvIbEYCPl170GumGLYvZOU3ksGnc4eY1HPq0GxjOY35jtFR3EhHiVPqO28WWDx1VujNzeemn0bGpoCExig0T2aENAn2CDxXSTKIuTXK'/>
+                    </div>
+                </div>
+            </section>
+            <section class='flex flex-col md:flex-row-reverse items-center gap-stack-lg md:gap-12' id='mining'>
+                <div class='w-full md:w-1/2 md:pl-12'>
+                    <h2 class='font-headline-lg text-headline-lg text-on-surface mb-stack-sm'>Mining</h2>
+                    <p class='font-body-md text-body-md text-on-surface-variant'>
+                        The high quality and superior value in its product offering have positioned AghaSolutions as a one-stop trusted supplier for world-class mining industry products.
+                    </p>
+                </div>
+                <div class='w-full md:w-1/2'>
+                    <div class='relative w-full aspect-[4/3] max-w-[500px] mx-auto'>
+                        <img alt='Mining sector' class='w-full h-full object-cover blob-mask-6 shadow-md' src='https://lh3.googleusercontent.com/aida-public/AB6AXuCNNE5XU16jx2Z19rKI6lvfoUYNeDX-oZw_7yBEajLwgNpGnJYn6nE93MuwCB9XBq13Gu1qWaqG-AZUQ75Vtw6ZP53Bfo1iIi6Cc-efzHB5Sg4_pIsf_hkQpjYxrScm_eXvdssqXelhhVrJfPcBKBksdLszdbEMRrkqsPYErJYKFaje0cP3AoWT0-N0R6bc53S_As8aFdLqyKfcAkye8QZIGv3irjdXO1sscCj7wnuv8U0JdixWPgqJMiVpghna4hhDkXsdu1MqLl49'/>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class='bg-on-secondary-fixed dark:bg-on-background'>
+        <div class='w-full py-stack-md flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto border-t border-surface-variant/20'>
+            <div class='font-headline-lg text-headline-lg font-black text-surface mb-4 md:mb-0'>
+                AghaSolutions
+            </div>
+            <div class='text-secondary-fixed dark:text-secondary-fixed-dim font-label-sm text-label-sm mb-4 md:mb-0'>
+                © AghaSolutions 2024. All rights reserved.
+            </div>
+            <nav class='flex gap-6 font-label-sm text-label-sm text-secondary-fixed'>
+                <a class='hover:text-primary-fixed transition-colors' href='#'>Privacy Policy</a>
+                <a class='hover:text-primary-fixed transition-colors' href='#'>Terms of Service</a>
+                <a class='hover:text-primary-fixed transition-colors' href='../contact_aghasolutions/code.html'>Contact</a>
+            </nav>
+<!-- Mobile Menu Container -->
+<div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-outline-variant shadow-lg overflow-hidden transition-all duration-300">
+<nav class="flex flex-col py-4 px-margin-mobile">
+<a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../home_aghasolutions/code.html">Home</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../about_us_aghasolutions/code.html">About</a><a class="text-primary font-semibold py-2 border-b border-outline-variant/30" href="../sectors_aghasolutions/code.html">Sectors</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../products_aghasolutions/code.html">Products</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../partners_aghasolutions/code.html">Partners</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../clients_aghasolutions/code.html">Clients</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../contact_aghasolutions/code.html">Contact</a>
+</nav>
+</div>
+
+        </div>
+    </footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuButton.querySelector('.material-symbols-outlined');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.textContent = 'menu';
+            } else {
+                icon.textContent = 'close';
+            }
+        });
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clients - AghaSolutions</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+
+                        "green": {
+                            "500": "#10b981",
+                            "600": "#059669"
+                        },
+                        "gray": {
+                            "50": "#f9fafb",
+                            "100": "#f3f4f6",
+                            "800": "#1f2937",
+                            "900": "#111827"
+                        },
+
+                        "on-tertiary-fixed": "#181c1c",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary-fixed": "#e0e3e2",
+                        "on-primary-fixed-variant": "#005228",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c4c7c6",
+                        "tertiary-container": "#959998",
+                        "secondary-container": "#e2dfde",
+                        "surface-bright": "#fbf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-tertiary-container": "#2d3131",
+                        "surface-variant": "#e4e2e2",
+                        "primary-container": "#27ae60",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#3d4a3f",
+                        "tertiary": "#5b5f5f",
+                        "inverse-primary": "#61de8a",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-tertiary-fixed-variant": "#434847",
+                        "surface": "#fbf9f8",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-container": "#00391a",
+                        "outline-variant": "#bccabc",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f2f0f0",
+                        "primary": "#006d37",
+                        "surface-tint": "#006d37",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e9e8e7",
+                        "surface-container-low": "#f5f3f3",
+                        "on-primary-fixed": "#00210c",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-dim": "#dbdad9",
+                        "on-error": "#ffffff",
+                        "secondary": "#5f5e5e",
+                        "inverse-surface": "#303031",
+                        "on-background": "#1b1c1c",
+                        "primary-fixed-dim": "#61de8a",
+                        "on-secondary-container": "#636262",
+                        "outline": "#6d7a6e",
+                        "surface-container": "#efeded",
+                        "primary-fixed": "#7efba4",
+                        "background": "#fbf9f8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "1rem",
+                        "stack-lg": "2rem",
+                        "stack-sm": "0.5rem",
+                        "section-padding": "5rem",
+                        "container-max": "1280px",
+                        "gutter": "1.5rem",
+                        "stack-md": "1rem"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Work Sans"],
+                        "headline-lg-mobile": ["Work Sans"],
+                        "body-lg": ["Open Sans"],
+                        "headline-md": ["Work Sans"],
+                        "display-lg": ["Work Sans"],
+                        "body-md": ["Open Sans"],
+                        "label-sm": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+
+
+<style data-purpose="custom-styles">
+    /* Header Dropdown (placeholder styles) */
+    .nav-item:hover .dropdown-menu {
+      display: block;
+    }
+    
+    /* Hero Image Overlay */
+    .hero-overlay {
+      background: rgba(31, 41, 55, 0.7); /* Dark overlay */
+    }
+    
+    /* Logo Grid Adjustments */
+    .logo-container img {
+      max-height: 80px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+    
+    .logo-container:hover img {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+</style>
+
+</head>
+<body class="bg-background text-on-surface antialiased flex flex-col min-h-screen">
+<!-- Top Utility Bar (Based on Image Reference, matching dark industrial theme) -->
+<div class="bg-on-secondary-fixed text-secondary-fixed w-full py-2">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex justify-between items-center font-label-sm text-label-sm">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 16px;">call</span>
+<span>+994 (50) 261 35 58</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 16px;">mail</span>
+<span>sales@aghasolutions.ae</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TopNavBar Component (from JSON) -->
+<header class="bg-surface dark:bg-surface-container border-b border-outline-variant dark:border-outline full-width top-0 z-50 sticky">
+<nav class="flex flex-col w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex items-center justify-between py-4">
+<!-- Brand Logo -->
+<div class="flex-shrink-0">
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface uppercase tracking-tight" href="../home_aghasolutions/code.html">AghaSolutions</a>
+</div>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../home_aghasolutions/code.html">Home</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../about_us_aghasolutions/code.html">About us</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../sectors_aghasolutions/code.html">Sectors</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../products_aghasolutions/code.html">Products</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../partners_aghasolutions/code.html">Partners</a>
+<a class="font-label-sm text-label-sm text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary dark:border-inverse-primary pb-1" href="../clients_aghasolutions/code.html">Clients</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../contact_aghasolutions/code.html">Contact</a>
+</div>
+<!-- Mobile Menu Button -->
+<div class="md:hidden flex items-center ml-4">
+<button id="mobile-menu-button" class="text-on-surface-variant hover:text-primary transition-colors focus:outline-none">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+<!-- Trailing Icon Actions -->
+<div class="flex items-center space-x-4">
+<button aria-label="language" class="text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined transform transition-transform hover:scale-110">language</span>
+</button>
+<button aria-label="search" class="text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined transform transition-transform hover:scale-110">search</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Mobile Menu Container -->
+<div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-outline-variant shadow-lg overflow-hidden transition-all duration-300">
+<nav class="flex flex-col py-4 px-margin-mobile">
+<a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../home_aghasolutions/code.html">Home</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../about_us_aghasolutions/code.html">About</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../sectors_aghasolutions/code.html">Sectors</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../products_aghasolutions/code.html">Products</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../partners_aghasolutions/code.html">Partners</a><a class="text-primary font-semibold py-2 border-b border-outline-variant/30" href="../clients_aghasolutions/code.html">Clients</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../contact_aghasolutions/code.html">Contact</a>
+</nav>
+</div>
+
+</header>
+<!-- Main Content -->
+
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative bg-gray-900 text-white h-64 md:h-80 flex items-center justify-center overflow-hidden">
+<!-- Background Image Placeholder (simulating the blue office background) -->
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516937941344-00b4eaf1e3b6?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-40"></div>
+<div class="absolute inset-0 bg-blue-900/60 mix-blend-multiply"></div>
+<div class="relative z-10 text-center px-4">
+<h1 class="text-4xl md:text-5xl font-bold mb-4">Clients</h1>
+<div class="flex items-center justify-center text-sm space-x-2 text-gray-300">
+<a class="hover:text-white transition" href="#">AghaSolutions</a>
+<span>›</span>
+<span class="text-white font-medium">Clients</span>
+</div>
+</div>
+</section>
+<!-- Clients Grid Section -->
+<section class="py-16 md:py-24 bg-white">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center max-w-6xl mx-auto">
+<!-- Client Logos (Placeholders mimicking the grid) -->
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 1" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3pVWymjK1MSJ50j_KzlTUAwIUM1J7alYO8OZSuguqCLED9O7H_vM3nvG88JsaZCMl7Q4ZfJTQ53NV-hR5btMv_OVyx19YZJctpUFAOysTYLnJlZjs3Ct6cF7s_rZSZCYfIYEbxfFObxl1yFBw7b23IhL5IdVmXeqKDT-W5D5AXl1xZ6r-7lKRKUJrqjlDtsbyRutnaj6kSJgTsP5rdyi2aVGongySBGtwp-_k_h3knnNfJIQBloSe5WZ9S8_H2Bkxoro3DZ-9Hpsu"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 2" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxWGN2JEBftuFo_Ly6FVOgCAajsTCQrytv1kwYmJQe-LWgXjGSzJGuwHQyxFY7HTYtHQdt7dwkaRECL3dUzblZ0lMcT4z07pzKdW_l3TeUmgjmb2utwsVXs3Ka3XbxIPU3haqKeK0T1bR83bP0A68qKxyDOzv4bPwPRmQtpoXA20hQbuIzpb8RccmCjCMzJiLyL_sD-QwqQdHIQKtPrdOLUmIQHZLCz2G8i57gMQY2e9zj8Hq-QnKrMquSlrJGK2TbUDZJJnPMf8i6"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 3" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN54j4K4z0t4Vu02RIhtt3D4cF4aeXVfnMDItjsz5IgTN_Cx5cnlEgaFU0UkbJ_HmkaI1cK4mZuF4wfDVsEX2VgHvQuovXJCvkk-CHBZfSoAQg6q_VlT2QVjGOQ2OO1emBHD7SiSij1gozpgAHccEfOelZwBKVc7zfxFk2sFf_oaxGfmzOXdZAFPuqfM_kyO-HQbDDrFj6mdQg5pnOPV6JLZM6iZbvzt0e04x6TWO_731cfAhb94EN0xPpGqZIEP2P1eDyp3-TYvhe"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 4" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAGS0WqBD4AanaQJheor6EyxUACeExcF-5y50IusvvYkIxaX8kDwMRpbHOOKZdwtj1a1bI42JZ6dFmr3BVMEGGcrQiR1pSkB21GhAJKozqdams4hlsAsyJhIwN-rkjhK8YbHFoDn07bt5oAmCUnKlQedtU9NJjJEMqJS1S-yhl84mdTb9aTI6Pp_9iZWnTxpwgaoj0lDdStmQWIirwwYC3LTgt0SBFP5NVuJS6v2f9h2h6KDi5r6F_Q9cEJmfuqFuNAqeMlB16qwhS"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 5" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbaYTiRPI_Wk247TlYSuPy19XVoPJm3-G5yTCHHgM9c2cHhk1vh-LMbMPF05RW-kZY98sXoJg_Ha1ktMkP_SZ3JryW85_sAZo2NImdnOEKd1OTfN0IZnEve1w--O87vNIqTV_P15D6urLMUXgpUjp6x69_QzIA9b9gS4AHqdYFf3fCPDSEMxXFafO5GVdTuox38-AFpgyGSEdW3YiGGj8JEEOTSn5obVklWMIDAdJpS4lScMpoCFj81rcwkhll5KM04Hd6noislYxc"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 6" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5idWHvQD5cI2igHc6JjzWip7FANWHbAowH-Eyh3Nh9tgxvZzCLujLpMQmZO-pXEX4c4bs9oz6WSa0doFCLVOYw-2M1ebtRj_il4ZmimfL-dz2msiskKupnUzB3qCRAdUEj2-ObPLa8bWlvjX5XVApJDaZkGxKlVLgqW6tC--qtQqWu9L6vmLxJfKr5TDE4ilkLIDW1cMfYuQ_PP4ykQJgbKmRW4RDJqaWyAXMmJuvzLFl97xUzvCzmOzLFgJgofEg5XPAVZBWuNXx"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 7" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpFS3wi66y-jTrXtaEY-dNLzAm8mfWu0NknZRoy3evhtYr8xipMTUzh1dTM6fvOKwWWOnD_hvI_bCt9EpYEVXotTGAgIAeXAm5Nw7NfPR0sD7al4TFEbyxA4YtNCHQAhS37-GCeymbV5tXZD6pLh0cSQdDnqWjDQ_fvOVYGZIqnKznGTPYZKI7dDY14bdxkhFlZSse1Z46YRzDqKpeP6yjpNiG-wT2dxMPdhYWRPZrVMhFNrhiPwrXZWltBE5dHPAQIX_h60ZyiB4k"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 8" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDby1PNz1_ZEG1nII0tROOkOZ2_1wlmLXWi36yxbl1jvGBrIQNsTLMLUdNhsCFODUP7coYmENlXd7-n8hHkFdGbotzRoWw4jfqB9cKdMopKCFpg81dR8v1jPc9qhvwxjaHVrcBI91gdBxsZUTCTdh1kHf_5D95S9UvJpA9cSEKjszliGImJI5ByIaVUori0vm72z5h3ZlTsraxe-3WLJYTdibbQDyMdy3dg0e20Tk5EsTOyiqzmdPOFOaQwbTbvUKyGJKPNWU7VsE6E"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 9" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBad5nwpav9nKnewrFIpKexLMxkTwfIseQRWcja7Q2qrUghunsw1xXqEWr5Sczz82qtdAvXKL9T-qer2XWCruMA-w0wmTqOCEkEXq3HM2zfUDHyVqURBL-dvobHYV4VK1Kvd0iKNAgmYR06LXGkNnIvEAZeoQW_chwOT552GIor2yMFmuIhTQ48HVATt8sjvC1GVAA6zBBQPYWlZ-jDkZg2k3-ed7aROPjRNK8Q6cnPfKztz4NIMlQMb8Hw4nOzK6k83uZau8__l2oK"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 10" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDebG0jpi2NF2DZsegg7qcTY-Y-dlYwwu7b1CaiZ1hOJeNn51x7ocSSFWOxXWxAA4zuINd1lb40XJpoGvRu1phg1WbtAyrl2AqeeoGS15ipNAf-00oY6mzFgOsTO449G_EsV79de7EuiznFzxJHb8JcG1slZ8xglkFQkCkRXIX31n_7SylT2S3mtzsiO4l0OwTXc5ycpVdUyj3WKEQyzo-zA0OxZSgscbNJLKLyvHnn9eoQdSfnmKqlvsLnxXpi7vZ5Tc12ZSVU96pA"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 11" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhuSkcD98TMFkb_uReXaB681tCiPg1Nosu4pa4nrXhOkX-65lm6b9QPPr9nVxdv4KSuLZ7OvXAo4sifz1fzhS_RBw8mBfkjWK09aOd61WtofELWaQniKgJkO10dMgIeXeDfwI5DRqkrpJMRbci_XbaLPP7dHPFvkB8J5tSToeHJl7Sl3VrqqZMAzwNqhZFoVaCbaferzI6N_BC2KPES9swDmKVhq9wELMxU7fGJqBMlwkLmpyWe0gY9V3KnibEQ2JFBSZGC4ZpGUeB"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 12" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwkYcUBuPLPGCq3_ZVesn-HON12yZxu0ORibIc2PQej73u5OA2zL-1sd_gn_XSNWVUpWuJ9kewEo_fJdpDl2pZPmYbKaP9D_dodSjSKV58cN5_8BOn0A62qzrj_KLDgltcg6Mnbs9yzzxttvo0rZgzJJvpoh48C4Gw8n7bFV3HXPXeXbSBO5LuGngZceIIEurNBjq99Wyy_m3mNCMSp7U9B3liD4MXpqItZjzJp2jCQ61I5jTskz72etp0ot9N7qGH5nujkZKZSBs4"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 13" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0twyhE7Gv2NXICRnBDCviA_S4NPRz-r6pPF1_LVHzA8Maa5EKeyLFQybaExlx7GZgjZUulYdltTFRETufRkKfgccD8VFeZ1v0doPFBY4ruYxhqoqy72Xerwoj1jCnuIeaKk4bjDY_ZjtPAdAN9Jcn8Hyq3sC5kxR1JKKiQdc_FzqbgQfR_EC-p5x0-DT31u2DWGlOnHvZTS6LU_POuiKO3lY2oEo3ACk-pS9pQ7ogrbEMH9aGd9nW8wl_-9PGrYS5S8LKYwnY7Mpm"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 14" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxNgfLd2E_CcDBmHdWzUwFloBP_4_RlroKA_6hIOnCFXldcXwEONf0x_3LA98pg3VWGkh7MH1qM6Hhs58vFkDg2c64bpE_3WAcXC-UoEZ5iiUUu5qgNyP5XoXL2sNVi3Icw86h91YPRd5Hr_ehFyVzXAr4xfgyxPvDQL84Du89otFmbTehvLXQLOCwAV9pIE2QMJJWEeZBCill4TH6msR1UhtepvkOINcFQ85aQyJnisbKh3Njr7V3CvtA-HmVWVKNom0DeP2Ga_ct"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 15" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-VoTHRdu5zUbL6TTLn-5K42OYqTADn-0untEV_I8GxV5Kus0ZzxvYSiVi2PK5xorz4Vf18WhHfgCHbbgk0oS7j56YmbG_ep1pQS2UnQE6ncJTemfQidvdY3R_cvmnTsTXJZfHNuq1DVzYws7Yc30lM_63BqyqBQV4xxRZKuQ5jeLDtO5xR-rKeh7P7OpLRqxUBZ4gzkVS_Ft-oCzaoTkLD1NCLPn4KVPZnNPbxm96o10Xdw1gL12eLKAjXHYoe21C_rR8k5j-7KJv"/>
+</div>
+<div class="logo-container flex items-center justify-center p-4 h-32 w-full">
+<img alt="Client 16" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpuIVBLWI6g7Fzsv1XnDuCPn2JAeUovTZbLsSsNuBwCsA0202iHtci534eIWfzVJhXz2fmNthwcFfvwBLfVKP3GxBuWKmHtZZzwlxTJNRBRkvgzsf9hUU-XS11JGhx4gfdx6YheKgbYTyLvD8Ljxgdae9F2pOF66QgV6NtKPIVe0HcGBLE7Nus9UbLtU5vHf6k9dzdYjYBvh_sbf0dMJmIXi9haB4dQPLgvDiWIXPTdxVXKi4azULBpW_qoXixF1FJf9tVE6H8a_JN"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-on-secondary-fixed dark:bg-on-background full-width bottom-0 mt-auto border-t border-outline-variant/20">
+<div class="w-full py-stack-md flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="font-body-md text-body-md text-secondary-fixed dark:text-secondary-fixed-dim mb-4 md:mb-0">
+                © AghaSolutions 2024. All rights reserved.
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-secondary-fixed hover:text-primary-fixed transition-colors hover:text-primary-fixed dark:hover:text-primary-fixed-dim opacity-90 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-secondary-fixed hover:text-primary-fixed transition-colors hover:text-primary-fixed dark:hover:text-primary-fixed-dim opacity-90 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-secondary-fixed hover:text-primary-fixed transition-colors hover:text-primary-fixed dark:hover:text-primary-fixed-dim opacity-90 hover:opacity-100" href="../contact_aghasolutions/code.html">Contact</a>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuButton.querySelector('.material-symbols-outlined');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.textContent = 'menu';
+            } else {
+                icon.textContent = 'close';
+            }
+        });
+    }
+});
+</script>
+</body>
+</html>

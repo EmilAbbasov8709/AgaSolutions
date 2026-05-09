@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products - AghaSolutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#181c1c",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary-fixed": "#e0e3e2",
+                        "on-primary-fixed-variant": "#005228",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c4c7c6",
+                        "tertiary-container": "#959998",
+                        "secondary-container": "#e2dfde",
+                        "surface-bright": "#fbf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-tertiary-container": "#2d3131",
+                        "surface-variant": "#e4e2e2",
+                        "primary-container": "#27ae60",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#3d4a3f",
+                        "tertiary": "#5b5f5f",
+                        "inverse-primary": "#61de8a",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-tertiary-fixed-variant": "#434847",
+                        "surface": "#fbf9f8",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-container": "#00391a",
+                        "outline-variant": "#bccabc",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f2f0f0",
+                        "primary": "#006d37",
+                        "surface-tint": "#006d37",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e9e8e7",
+                        "surface-container-low": "#f5f3f3",
+                        "on-primary-fixed": "#00210c",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-dim": "#dbdad9",
+                        "on-error": "#ffffff",
+                        "secondary": "#5f5e5e",
+                        "inverse-surface": "#303031",
+                        "on-background": "#1b1c1c",
+                        "primary-fixed-dim": "#61de8a",
+                        "on-secondary-container": "#636262",
+                        "outline": "#6d7a6e",
+                        "surface-container": "#efeded",
+                        "primary-fixed": "#7efba4",
+                        "background": "#fbf9f8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "1rem",
+                        "stack-lg": "2rem",
+                        "stack-sm": "0.5rem",
+                        "section-padding": "5rem",
+                        "container-max": "1280px",
+                        "gutter": "1.5rem",
+                        "stack-md": "1rem"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Work Sans"],
+                        "headline-lg-mobile": ["Work Sans"],
+                        "body-lg": ["Open Sans"],
+                        "headline-md": ["Work Sans"],
+                        "display-lg": ["Work Sans"],
+                        "body-md": ["Open Sans"],
+                        "label-sm": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased flex flex-col min-h-screen">
+<!-- Top Utility Bar (Based on Image Reference, matching dark industrial theme) -->
+<div class="bg-on-secondary-fixed text-secondary-fixed w-full py-2">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex justify-between items-center font-label-sm text-label-sm">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 16px;">call</span>
+<span>+994 (50) 261 35 58</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 16px;">mail</span>
+<span>sales@aghasolutions.ae</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TopNavBar Component (from JSON) -->
+<header class="bg-surface dark:bg-surface-container border-b border-outline-variant dark:border-outline full-width top-0 z-50 sticky">
+<nav class="flex flex-col w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex items-center justify-between py-4">
+<!-- Brand Logo -->
+<div class="flex-shrink-0">
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface uppercase tracking-tight" href="../home_aghasolutions/code.html">AghaSolutions</a>
+</div>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../home_aghasolutions/code.html">Home</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../about_us_aghasolutions/code.html">About us</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../sectors_aghasolutions/code.html">Sectors</a>
+<a class="font-label-sm text-label-sm text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary dark:border-inverse-primary pb-1" href="../products_aghasolutions/code.html">Products</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../partners_aghasolutions/code.html">Partners</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../clients_aghasolutions/code.html">Clients</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest duration-200" href="../contact_aghasolutions/code.html">Contact</a>
+</div>
+<!-- Mobile Menu Button -->
+<div class="md:hidden flex items-center ml-4">
+<button id="mobile-menu-button" class="text-on-surface-variant hover:text-primary transition-colors focus:outline-none">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+<!-- Trailing Icon Actions -->
+<div class="flex items-center space-x-4">
+<button aria-label="language" class="text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined transform transition-transform hover:scale-110">language</span>
+</button>
+<button aria-label="search" class="text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined transform transition-transform hover:scale-110">search</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Mobile Menu Container -->
+<div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-outline-variant shadow-lg overflow-hidden transition-all duration-300">
+<nav class="flex flex-col py-4 px-margin-mobile">
+<a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../home_aghasolutions/code.html">Home</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../about_us_aghasolutions/code.html">About</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../sectors_aghasolutions/code.html">Sectors</a><a class="text-primary font-semibold py-2 border-b border-outline-variant/30" href="../products_aghasolutions/code.html">Products</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../partners_aghasolutions/code.html">Partners</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../clients_aghasolutions/code.html">Clients</a><a class="text-on-surface-variant py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="../contact_aghasolutions/code.html">Contact</a>
+</nav>
+</div>
+
+</header>
+<main class="flex-grow flex flex-col w-full">
+<!-- Hero Banner Section -->
+<section class="relative w-full h-[300px] md:h-[400px] bg-on-background overflow-hidden flex items-center justify-center text-center">
+<!-- Background Image -->
+<div class="absolute inset-0 w-full h-full">
+<img alt="Industrial Machinery Background" class="w-full h-full object-cover object-center opacity-70 mix-blend-overlay" data-alt="A wide, sweeping photograph of heavy industrial machinery inside a modern manufacturing plant. The image has a warm, sepia-toned or orange overlay, emphasizing the raw mechanical power of the gears, belts, and metal structures. The lighting highlights the cylindrical components and creates deep shadows, embodying a robust, heavy-industry aesthetic suitable for an engineering corporate B2B website." src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"/>
+<!-- Warm Gradient Overlay to match reference -->
+<div class="absolute inset-0 bg-gradient-to-r from-orange-900/60 to-red-900/40 mix-blend-multiply"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 flex flex-col items-center gap-4 px-margin-mobile">
+<h1 class="font-display-lg text-display-lg text-surface-container-lowest">Products</h1>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-surface-container-lowest/80">
+<span>AghaSolutions</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-surface-container-lowest font-semibold">Products</span>
+</div>
+</div>
+</section>
+<!-- Product Accordion List Section -->
+<section class="w-full max-w-[1000px] mx-auto px-margin-mobile md:px-gutter py-section-padding">
+<div class="flex flex-col border border-outline-variant rounded-DEFAULT overflow-hidden bg-surface-container-lowest shadow-sm">
+<!-- Accordion Item 1 -->
+<div class="group border-b border-outline-variant last:border-b-0 cursor-pointer hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center px-6 py-5 min-h-[80px]">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px] w-12 shrink-0">add</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface text-center flex-grow">Pumps, Hydraulic Solutions, Flow Control and Compressors</h3>
+<div class="w-12 shrink-0"></div> <!-- Spacer for center alignment -->
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="group border-b border-outline-variant last:border-b-0 cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center px-6 py-5 min-h-[80px]">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px] w-12 shrink-0">add</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface text-center flex-grow">Pipe, Fittings, Tubings, Flanges, Gaskets and Fasteners</h3>
+<div class="w-12 shrink-0"></div>
+</div>
+</div>
+<!-- Accordion Item 3 -->
+<div class="group border-b border-outline-variant last:border-b-0 cursor-pointer bg-surface-bright hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center px-6 py-5 min-h-[80px]">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px] w-12 shrink-0">add</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface text-center flex-grow">Valves and Actuators</h3>
+<div class="w-12 shrink-0"></div>
+</div>
+</div>
+<!-- Accordion Item 4 -->
+<div class="group border-b border-outline-variant last:border-b-0 cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center px-6 py-5 min-h-[80px]">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px] w-12 shrink-0">add</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface text-center flex-grow">Marine Division</h3>
+<div class="w-12 shrink-0"></div>
+</div>
+</div>
+<!-- Accordion Item 5 -->
+<div class="group border-b border-outline-variant last:border-b-0 cursor-pointer bg-surface-bright hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center px-6 py-5 min-h-[80px]">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px] w-12 shrink-0">add</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface text-center flex-grow">Steel Materials</h3>
+<div class="w-12 shrink-0"></div>
+</div>
+</div>
+<!-- Accordion Item 6 -->
+<div class="group border-b border-outline-variant last:border-b-0 cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center px-6 py-5 min-h-[80px]">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px] w-12 shrink-0">add</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface text-center flex-grow">Seals and Bearings</h3>
+<div class="w-12 shrink-0"></div>
+</div>
+</div>
+<!-- Accordion Item 7 -->
+<div class="group border-b border-outline-variant last:border-b-0 cursor-pointer bg-surface-bright hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center px-6 py-5 min-h-[80px]">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px] w-12 shrink-0">add</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface text-center flex-grow">Electrical and Industrial Instrumentation Supply</h3>
+<div class="w-12 shrink-0"></div>
+</div>
+</div>
+<!-- Accordion Item 8 -->
+<div class="group border-b border-outline-variant last:border-b-0 cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center px-6 py-5 min-h-[80px]">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px] w-12 shrink-0">add</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface text-center flex-grow">HVAC&amp;R and Clean Air Solution</h3>
+<div class="w-12 shrink-0"></div>
+</div>
+</div>
+<!-- Accordion Item 9 -->
+<div class="group border-b border-outline-variant last:border-b-0 cursor-pointer bg-surface-bright hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center px-6 py-5 min-h-[80px]">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px] w-12 shrink-0">add</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface text-center flex-grow">Welding and Cutting</h3>
+<div class="w-12 shrink-0"></div>
+</div>
+</div>
+<!-- Accordion Item 10 -->
+<div class="group border-b border-outline-variant last:border-b-0 cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center px-6 py-5 min-h-[80px]">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px] w-12 shrink-0">add</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface text-center flex-grow">Paints and Coatings</h3>
+<div class="w-12 shrink-0"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-secondary-fixed w-full mt-auto">
+<div class="w-full py-stack-md flex flex-col md:flex-row justify-center items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<span class="text-secondary-fixed font-body-md text-body-md text-center">
+                © AghaSolutions 2024. All rights reserved.
+            </span>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuButton.querySelector('.material-symbols-outlined');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.textContent = 'menu';
+            } else {
+                icon.textContent = 'close';
+            }
+        });
+    }
+});
+</script>
+</body></html>
